@@ -1,0 +1,72 @@
+/* 基本重置和全局样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden; /* 防止出现滚动条 */
+}
+
+/* 需求2: 动画容器样式 */
+#animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    z-index: 1; /* 确保在内容下方 */
+}
+
+/* 这是一个简单的背景渐变动画，你可以替换成你自己的动画 */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 动画占位符内的文本样式 */
+#animation-container .placeholder-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* 内容容器，用于将按钮置于页面中央 */
+.content {
+    position: relative;
+    z-index: 2; /* 确保在动画层上方 */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 需求3: 按钮样式 */
+#play-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#play-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#play-button:active {
+    transform: scale(0.95);
+}
