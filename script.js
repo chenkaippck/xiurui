@@ -2,8 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ----------- 配置区域 -----------
-    const totalAudioFiles = 20; // 你的音频文件总数
-    const audioFileType = '.mp3'; // 音频文件类型
+    const totalAudioFiles = 6; // 你的音频文件总数
+    const audioFileType = '.wav'; // 音频文件类型
     // -------------------------------
 
     const playButton = document.getElementById('play-button');
