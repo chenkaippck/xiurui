@@ -59,3 +59,22 @@ document.addEventListener('DOMContentLoaded', function() {
     playRandomAudio();
 
 });
+// ... (上面 playRandomAudio 函数的代码保持不变)
+
+// 为按钮添加点击事件监听器
+playButton.addEventListener('click', playRandomAudio);
+
+// --- 新增的入口逻辑 ---
+const enterOverlay = document.getElementById('enter-overlay');
+const enterButton = document.getElementById('enter-button');
+
+enterButton.addEventListener('click', () => {
+    // 隐藏遮罩层
+    enterOverlay.style.display = 'none';
+    
+    // 在用户第一次点击后，播放第一首随机音频
+    playRandomAudio();
+});
+
+// 页面首次加载或刷新时，不再直接调用播放，而是等待用户点击入口
+// playRandomAudio(); // <-- 把这一行注释掉或删除
