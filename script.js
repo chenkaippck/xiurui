@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ----------- 配置区域 -----------
     const totalAudioFiles = 6;
-    const audioFileType = '.wav'; 
+    const audioFileType = '.mp3';  
     // -------------------------------
 
     const playButton = document.getElementById('play-button');
